@@ -19,7 +19,3 @@ document.querySelector(".address-btn").addEventListener(async () => {
     const url = document.querySelector(".address-bar").value;
     await document.querySelector("webview").loadURL(url);
 });
-
-export default plugin = {
-    name: "Chrome (Webview for BestEditor)"
-};
