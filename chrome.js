@@ -7,14 +7,15 @@ addressBar.placeholder = "Enter web URL";
 addressBar.className = "address-bar";
 
 const addressBtn = document.createElement("button");
-addressBtn.value = "Go";
+addressBtn.innerText = "Go";
 addressBtn.className = "address-btn";
 
 const webview = document.createElement("webview");
-document.appendChild(addressBar);
-document.appendChild(addressBtn);
 
-document.querySelector(".address-btn").addEventListener(async () => {
+document.querySelector("body").appendChild(addressBar);
+document.querySelector("body").appendChild(addressBtn);
+
+document.querySelector(".address-btn").addEventListener("click", async () => {
     // TODO: Validate input URL
     const url = document.querySelector(".address-bar").value;
     await document.querySelector("webview").loadURL(url);
