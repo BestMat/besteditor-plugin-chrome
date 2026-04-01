@@ -10,7 +10,7 @@ const addressBtn = document.createElement("button");
 addressBtn.innerText = "Go";
 addressBtn.className = "address-btn";
 
-const webview = document.createElement("webview");
+const webview = getWebview();
 
 document.querySelector("body").appendChild(addressBar);
 document.querySelector("body").appendChild(addressBtn);
@@ -18,5 +18,5 @@ document.querySelector("body").appendChild(addressBtn);
 document.querySelector(".address-btn").addEventListener("click", async () => {
     // TODO: Validate input URL
     const url = document.querySelector(".address-bar").value;
-    await document.querySelector("webview").loadURL(url);
+    await webview.loadURL(url);
 });
