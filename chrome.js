@@ -10,6 +10,7 @@ addressBar.style.fontFamily = "Monaco, monospace";
 addressBar.style.borderRadius = "10px";
 addressBar.style.border = "none";
 addressBar.style.outline = "none";
+addressBar.style.width = "30vw";
 
 const addressBtn = document.createElement("button");
 addressBtn.innerHTML = `<i class="bi bi-search"></i>Browse`;
